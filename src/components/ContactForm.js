@@ -31,8 +31,8 @@ export class ContactForm extends React.Component {
     const { name, number } = this.props;
 
     return (
-      <>
-        <label className="input-group" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
+        <label className="input-group">
           <span className="name">Name</span>
           <input
             type="text"
@@ -58,7 +58,7 @@ export class ContactForm extends React.Component {
         </label>
 
         <button type="submit">Add contact</button>
-      </>
+      </form>
     );
   }
 }
